@@ -16,7 +16,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         try {
-            registry.addHandler((WebSocketHandler) new SocketHandler(), "/socket")
+            registry.addHandler((WebSocketHandler) new SocketHandler(), "/api/socket")
                     .setAllowedOrigins("*");
         } catch (IOException e) {
             throw new RuntimeException(e);

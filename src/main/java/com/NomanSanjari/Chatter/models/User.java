@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
 
     @Id
-    private String id;
+    private String userID;
     private String username;
 
     @JsonCreator
@@ -25,10 +25,10 @@ public class User {
     }
 
     public String getId() {
-        return this.id;
+        return this.userID;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setId(String userID) {
+        this.userID = userID;
     }
 }
