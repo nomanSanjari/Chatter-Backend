@@ -1,8 +1,8 @@
 package com.NomanSanjari.Chatter.repositories;
 
-import com.NomanSanjari.Chatter.models.User;
+import com.NomanSanjari.Chatter.models.Session;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 
-public interface SessionRepository extends ReactiveMongoRepository<User, String> {
+public interface SessionRepository extends ReactiveMongoRepository<Session, String> {
 
 }

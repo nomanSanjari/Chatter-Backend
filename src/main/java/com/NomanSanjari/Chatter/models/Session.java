@@ -10,8 +10,10 @@ public class Session {
     @Id
     private String sessionID;
     private String sessionName;
-    private String clientAID;
-    private String clientBID;
+    private User userA;
+    private String userA_SDP;
+    private User userB;
+    private String userB_ID;
 
     @JsonCreator
     public Session(String sessionName) {
@@ -32,5 +34,21 @@ public class Session {
 
     public void setSessionName(String sessionName) {
         this.sessionName = sessionName;
+    }
+
+    public User getUserA() {
+        return this.userA;
+    }
+
+    public void setUserA(User userA) {
+        this.userA = userA;
+    }
+
+    public User getUserB() {
+        return this.userB;
+    }
+
+    public void setUserB(User userB) {
+        this.userB = userB;
     }
 }
