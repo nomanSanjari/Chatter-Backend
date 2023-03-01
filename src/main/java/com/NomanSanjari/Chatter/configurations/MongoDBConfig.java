@@ -7,18 +7,19 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
-
 @Configuration
 public class MongoDBConfig {
 
+    /**
+     * Gets the required connection string from application.properties
+     * mongo.db.connectionString
+     */
     @Value("${mongo.db.connectionString}")
     private String connectionString;
 
+    /**
+     * @return MongoClient instance for Read/Write operations to/from the MongoDB database
+     */
     @Bean
     public MongoClient mongoClient() {
         return MongoClients.create(connectionString);
